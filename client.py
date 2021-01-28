@@ -48,12 +48,10 @@ while shutdown == False:
 		try:
 			message = input()
 
-			# Begin
 			crypt = ""
 			for i in message:
 				crypt += chr(ord(i)^key)
 			message = crypt
-			# End
 
 			if message != "":
 				s.sendto(("["+alias + "] :: "+message).encode("utf-8"),server)
