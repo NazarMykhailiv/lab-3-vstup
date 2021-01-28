@@ -10,9 +10,7 @@ def receving (name, sock):
 		try:
 			while True:
 				data, addr = sock.recvfrom(1024)
-				#print(data.decode("utf-8"))
-
-				# Begin
+				
 				decrypt = ""; k = False
 				for i in data.decode("utf-8"):
 					if i == ":":
